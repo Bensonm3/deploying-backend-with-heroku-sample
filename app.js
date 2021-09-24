@@ -26,9 +26,9 @@ mongoose.connect('mongodb+srv://bensonm3:%40Bensmat08@cluster0.hvyfm.mongodb.net
 
 
 // app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({
-//   extended: true
-// }));
+ app.use(bodyParser.urlencoded({
+   extended: true
+ }));
  app.use(cors());
  app.use('/athletes', athleteRoute)
  app.use(bodyParser.json());
