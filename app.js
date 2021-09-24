@@ -30,11 +30,12 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 app.use('/athletes', athleteRoute)
 
+// test stuff
 app.use(express.static(path.join(__dirname, 'build')));
     
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-})
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// })
 
 // app.get('/', (req, res) => { // send a get request to root directory ('/' is this file (app.js))
 //   fetch('https://www.boredapi.com/api/activity') // fetch activity from bored API - https://www.boredapi.com/about
