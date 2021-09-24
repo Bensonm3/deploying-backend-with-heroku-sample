@@ -9,7 +9,7 @@ let dbConfig = require('./database/db');
 
 
 // Express Route
-const athleteRoute = require('./routes/athlete.route')
+const athleteRoute = require('../deploying-backend-with-heroku-sample/routes/athlete.route')
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
