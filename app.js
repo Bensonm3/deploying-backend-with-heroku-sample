@@ -9,19 +9,19 @@ let dbConfig = require('./database/db');
 
 
 // Express Route
-const athleteRoute = require('../deploying-backend-with-heroku-sample/routes/athlete.route')
+// const athleteRoute = require('../deploying-backend-with-heroku-sample/routes/athlete.route')
 
-// Connecting mongoDB Database
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://bensonm3:%40Bensmat08@cluster0.hvyfm.mongodb.net/Project_0?retryWrites=true&w=majority', {
-  useNewUrlParser: true, useUnifiedTopology: true
-}).then(() => {
-  console.log('Database sucessfully connected!')
-},
-  error => {
-    console.log('Could not connect to database : ' + error)
-  }
-)
+// // Connecting mongoDB Database
+// mongoose.Promise = global.Promise;
+// mongoose.connect('mongodb+srv://bensonm3:%40Bensmat08@cluster0.hvyfm.mongodb.net/Project_0?retryWrites=true&w=majority', {
+//   useNewUrlParser: true, useUnifiedTopology: true
+// }).then(() => {
+//   console.log('Database sucessfully connected!')
+// },
+//   error => {
+//     console.log('Could not connect to database : ' + error)
+//   }
+// )
 
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({
