@@ -18,7 +18,7 @@ router.route('/create-athlete').post((req, res, next) => {
 });
 
 // READ Athletes
-router.route('/').get((req, res) => {
+router.route('/*').get((req, res) => {
   athleteSchema.find((error, data) => {
     if (error) {
       return next(error)
