@@ -23,28 +23,28 @@ mongoose.connect('mongodb+srv://bensonm3:%40Bensmat08@cluster0.hvyfm.mongodb.net
   }
 )
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-app.use(cors());
-app.use('/athletes', athleteRoute)
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({
+//   extended: true
+// }));
+// app.use(cors());
+// app.use('/athletes', athleteRoute)
 
-// test stuff
-app.use(express.static(path.join(__dirname, 'build')));
+// // test stuff
+// app.use(express.static(path.join(__dirname, 'build')));
     
-// app.get('/', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// })
+// // app.get('/', function (req, res) {
+// //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// // })
 
-// app.get('/', (req, res) => { // send a get request to root directory ('/' is this file (app.js))
-//   fetch('https://www.boredapi.com/api/activity') // fetch activity from bored API - https://www.boredapi.com/about
-//     .then(res => res.json()) // return a promise containing the response
-//     .then(json => res.send(`<h1>Today's Activity: ${json.activity}!</h1>`)) // extract the JSON body content from the response (specifically the activity value) and sends it to the client
-//     .catch(function(err){ // catch any errors
-//       console.log(err); // log errors to the console
-//     })
-// })
+app.get('/', (req, res) => { // send a get request to root directory ('/' is this file (app.js))
+  fetch('https://www.boredapi.com/api/activity') // fetch activity from bored API - https://www.boredapi.com/about
+    .then(res => res.json()) // return a promise containing the response
+    .then(json => res.send(`<h1>Today's Activity: ${json.activity}!</h1>`)) // extract the JSON body content from the response (specifically the activity value) and sends it to the client
+    .catch(function(err){ // catch any errors
+      console.log(err); // log errors to the console
+    })
+})
 
 app.listen(PORT, () => { // start server and listen on specified port
   console.log(`App is running on ${PORT}`) // confirm server is running and log port to the console
