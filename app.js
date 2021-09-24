@@ -23,28 +23,7 @@ mongoose.connect('mongodb+srv://bensonm3:%40Bensmat08@cluster0.hvyfm.mongodb.net
   }
 )
 
-// CREATE Athlete
-router.route('/create-athlete').post((req, res, next) => {
-  athleteSchema.create(req.body, (error, data) => {
-    if (error) {
-      return next(error)
-    } else {
-      console.log(data)
-      res.json(data)
-    }
-  })
-});
 
-// READ Athletes
-router.route('/').get((req, res) => {
-  athleteSchema.find((error, data) => {
-    if (error) {
-      return next(error)
-    } else {
-      res.json(data)
-    }
-  })
-})
 
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({
