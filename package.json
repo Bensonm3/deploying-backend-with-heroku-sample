@@ -16,5 +16,6 @@
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "engine": "12.13.0"
 }
